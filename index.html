@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In Text</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .fade-in-text {
+            font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        .horizontal-line {
+            width: 0;
+            height: 2px;
+            background-color: white;
+            margin: 10px auto 0;
+            animation: extendLine 3s forwards 3s;
+            position: relative;
+        }
+
+        .cv-link {
+            font-size: 1.2rem;
+            color: red;
+            opacity: 0;
+            animation: fadeIn 2s forwards 6s;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes extendLine {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="fade-in-text">Bjørge Zagros Rysstad</div>
+        <div class="horizontal-line"></div>
+        <a class="cv-link" href="CV.pdf" download>CV</a>
+    </div>
+</body>
+</html>
